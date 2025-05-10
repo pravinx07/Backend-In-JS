@@ -1,0 +1,14 @@
+ Get all User from the  data 
+ Get('/api/users) for json mobile and other
+ Get('/users) for html data
+
+Get user by id 1  Get('/api/user/id)
+Get user by id 2
+
+ add user to the data 
+ Post
+
+ update user
+
+ delete user
+ 
