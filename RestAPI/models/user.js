@@ -21,8 +21,8 @@ const userSchema = new mongoose.Schema({
  job_title:{
    type:String
  }
-})
+},{timestamps: true})
 
 const User = mongoose.model("user",userSchema)
 
-export default User
+module.exports = User
