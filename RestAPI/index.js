@@ -1,8 +1,8 @@
 import express from "express"
 import data from './MOCK_DATA.json' with { type: "json" };
 import fs from 'fs'
-import { log } from "console";
-
+import connectDb from './db.js'
+import User from './model.js'
 
 
 const app = express()
@@ -10,6 +10,9 @@ const PORT = 8000
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
+connectDb()
+const newUser = new User({ first_name: 'Alice', email:"ajay@gmail.com" });
+newUser.save().then(() => console.log('User saved'));
 
 app.get("/users",(req,res)=>{
     const html = `
