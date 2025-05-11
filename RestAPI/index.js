@@ -1,5 +1,5 @@
 import express from "express";
-import connectDb from "./db.js";
+import connectDb from "./connection.js";
 import userRouter from "./routes/user.js";
 
 const app = express();
@@ -10,7 +10,7 @@ app.use(express.json());
 connectDb();
 
 // Routes
-app.user("/user", userRouter);
+app.use("/user", userRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
