@@ -15,3 +15,13 @@ export async function handleGetUrl(req,res){
     })
     return res.json({id:shortId})
 }
+
+
+export async function handleGetAnalytics(req,res){
+    const shortId = req.params.shortId
+    const result = Url.find({shortId})
+    return res.json({
+        totalClicks:result.visitedHistory.length,
+        analytics:result.visitedHistory
+    })
+} 
