@@ -3,7 +3,7 @@ import User from "../models/User.js"
 
 
 const protect = async(req,res,next) => {
-    const token = req.headers.authorization;
+    let token = req.headers.authorization;
     if(!token || !token.startsWith("Bearer ")){
       return res.status(409).json({
         message:"Unauthorize "
@@ -13,8 +13,12 @@ const protect = async(req,res,next) => {
     try {
       token = token.split(" ")[1]
       const decoded =  jwt.verify(token, process.env.JWT_SECRETE)
-      req.body = await User.find(decoded.id).select("-password")
 
+      const user = await User.findById(decoded.id).select("-password")
+      if(!user){
+        return res.status(400).json("User not found")
+      }
+      req.user = user
       next()
     } catch (error) {
         return res.status(409).json({

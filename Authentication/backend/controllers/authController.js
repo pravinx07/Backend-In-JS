@@ -13,7 +13,7 @@ export const signUp = async (req, res) => {
 
    try {
     if(!username || !email || !password){
-     res.status(400).json({
+     return res.status(400).json({
          message:"All fields are required"
      })
     }
@@ -30,13 +30,13 @@ export const signUp = async (req, res) => {
      const user = await User.create({username, email, password})
      const token = generateToken(user)
  
-     res.status(200).json({
+     return res.status(200).json({
         token:token,
          message:"User created successfully"
      })
  
    } catch (error) {
-      res.status(500).json({
+     return res.status(500).json({
         message:`Server error`, error:error.message
       })
    }
@@ -61,7 +61,7 @@ export const login = async(req,res) => {
             })
         }
 
-        const isMatch = user.comaparePassword(password)
+        const isMatch = user.comparePassword(password)
 
         if(!isMatch){
             res.status(400).json({
@@ -79,4 +79,10 @@ export const login = async(req,res) => {
     } catch (error) {
         return res.status(400).json({message: "Login failed! ..", error:error.message})
     }
+}
+
+export const protectedRoute = (req,res) => {
+    res.status(200).json({
+        message:"You are on protected route"
+    })
 }
