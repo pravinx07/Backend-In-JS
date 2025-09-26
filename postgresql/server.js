@@ -2,6 +2,7 @@ import express from "express"
 import dotenv from "dotenv"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+import userRouter from "./routes/auth.route.js"
 
 const app = express()
 dotenv.config();
@@ -22,7 +23,7 @@ app.get("/", (req,res) => {
     })
 })
 
-// app.use("/api/v1/users")
+app.use("/api/v1/users", userRouter)
 
 app.listen(PORT , () => {
     console.log(`Server is running on http://localhost:${PORT}`);
