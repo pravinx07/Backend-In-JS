@@ -52,65 +52,68 @@ export const registerUser = async (req, res) => {
 };
 
 export const loginUser = async (req, res) => {
-  const { email, password } = req.body;
+  const { email: userEmail, password: userPassword } = req.body;
 
-  if (!email || !password) {
+  if (!userEmail || !userPassword) {
     return res.status(400).json({
       success: false,
-      message: "All fields are required",
+      message: "Email and password are required",
     });
   }
 
   try {
-    const user = await prisma.user.findUnique({
-      where: { email },
+    const existingUser = await prisma.user.findUnique({
+      where: { email: userEmail },
     });
 
-    if (!user) {
-      return res.status(400).json({
+    if (!existingUser) {
+      return res.status(401).json({
         success: false,
         message: "Invalid credentials",
       });
     }
 
-    const isMatch = bcrypt.compare(password, user.password);
-    if (!isMatch) {
-      return res.status(400).json({
+    const isPasswordValid = await bcrypt.compare(
+      userPassword,
+      existingUser.password
+    );
+
+    if (!isPasswordValid) {
+      return res.status(401).json({
         success: false,
-        message: "Invalid Email or password",
+        message: "Invalid credentials",
       });
     }
 
-    
-    jwt.sign(
+    const token = jwt.sign(
       {
-        id: user.id,
+        id: existingUser.id,
       },
-
-      
       process.env.JWT_SECRETE,
       { expiresIn: "24h" }
     );
 
     const cookieOptions = {
-        httpOnly:true
-      }
-    res.cookie("token", token, cookieOptions)
+      httpOnly: true,
+    };
+
+    res.cookie("token", token, cookieOptions);
 
     return res.status(201).json({
-        success:true,
-        token,
-        user:{
-            id:user.id,
-            name:user.name,
-            email:user.email
-        },
-        message:"User Login Successfully"
-    })
+      success: true,
+      token,
+      user: {
+        id: existingUser.id,
+        name: existingUser.name,
+        email: existingUser.email,
+      },
+      message: "User logged in successfully",
+    });
   } catch (error) {
-    return res.status(400).json({
+    return res.status(500).json({
       success: false,
-      message: "Login failed",
+      message: "An error occurred while logging in",
     });
   }
 };
+
