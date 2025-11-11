@@ -13,9 +13,14 @@
   "dependencies": {
     "express": "^5.1.0",
     "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
     "install": "^0.13.0",
+    "morgan": "^1.10.1",
     "nodemon": "^3.1.10",
     "npm": "^11.6.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.18.3",
     "zod": "^4.1.12"
   }
 }

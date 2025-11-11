@@ -1,0 +1,45 @@
+2025-11-11 14:57:39 [INFO]: Server is running on 5000
+2025-11-11 14:57:54 [INFO]: Server is running on 5000
+2025-11-11 14:57:59 [INFO]: Server is running on 5000
+2025-11-11 14:58:23 [INFO]: Home route access
+2025-11-11 14:58:23 [INFO]: [0mGET / [32m200[0m 39.474 ms - 13[0m
+2025-11-11 14:58:25 [INFO]: [0mGET /favicon.ico [33m404[0m 3.407 ms - 150[0m
+2025-11-11 14:58:42 [INFO]: Home route access
+2025-11-11 14:58:42 [INFO]: [0mGET / [36m304[0m 4.165 ms - -[0m
+2025-11-11 14:59:07 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 20.357 ms - 62[0m
+2025-11-11 14:59:09 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.522 ms - 62[0m
+2025-11-11 14:59:11 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.731 ms - 62[0m
+2025-11-11 14:59:12 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.334 ms - 62[0m
+2025-11-11 14:59:14 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.042 ms - 62[0m
+2025-11-11 14:59:15 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.649 ms - 62[0m
+2025-11-11 14:59:16 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.015 ms - 62[0m
+2025-11-11 14:59:18 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 1.822 ms - 70[0m
+2025-11-11 14:59:20 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 1.602 ms - 70[0m
+2025-11-11 14:59:21 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 1.272 ms - 70[0m
+2025-11-11 15:00:30 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 0.732 ms - 70[0m
+2025-11-11 15:00:32 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 1.104 ms - 70[0m
+2025-11-11 15:00:33 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 1.398 ms - 70[0m
+2025-11-11 15:13:13 [INFO]: Server is running on 5000
+2025-11-11 15:13:25 [INFO]: Server is running on 5000
+2025-11-11 15:13:29 [INFO]: Server is running on 5000
+2025-11-11 15:14:03 [INFO]: Server is running on 5000
+2025-11-11 15:14:20 [INFO]: [0mGET /api-docs [36m301[0m 4.491 ms - 158[0m
+2025-11-11 15:14:20 [INFO]: [0mGET /api-docs/ [32m200[0m 3.542 ms - 3106[0m
+2025-11-11 15:14:20 [INFO]: [0mGET /api-docs/swagger-ui.css [32m200[0m 8.969 ms - 155212[0m
+2025-11-11 15:14:20 [INFO]: [0mGET /api-docs/swagger-ui-init.js [32m200[0m 0.471 ms - 3018[0m
+2025-11-11 15:14:20 [INFO]: [0mGET /api-docs/swagger-ui-standalone-preset.js [32m200[0m 9.218 ms - 250335[0m
+2025-11-11 15:14:20 [INFO]: [0mGET /api-docs/swagger-ui-bundle.js [32m200[0m 11.925 ms - 1510159[0m
+2025-11-11 15:14:22 [INFO]: [0mGET /api-docs/favicon-32x32.png [32m200[0m 2.582 ms - 628[0m
+2025-11-11 15:14:52 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 36.241 ms - 62[0m
+2025-11-11 15:15:12 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 2.701 ms - 62[0m
+2025-11-11 15:15:22 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.695 ms - 62[0m
+2025-11-11 15:15:23 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 2.347 ms - 62[0m
+2025-11-11 15:15:25 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 7.533 ms - 62[0m
+2025-11-11 15:15:26 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 2.498 ms - 62[0m
+2025-11-11 15:15:28 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.481 ms - 62[0m
+2025-11-11 15:15:30 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 1.540 ms - 62[0m
+2025-11-11 15:15:31 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 2.936 ms - 62[0m
+2025-11-11 15:15:32 [INFO]: [0mPOST /api/v1/auth/register [32m200[0m 7.148 ms - 62[0m
+2025-11-11 15:15:33 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 1.713 ms - 70[0m
+2025-11-11 15:15:34 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 3.083 ms - 70[0m
+2025-11-11 15:15:36 [INFO]: [0mPOST /api/v1/auth/register [33m429[0m 1.708 ms - 70[0m
